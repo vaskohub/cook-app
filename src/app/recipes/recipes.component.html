@@ -5,13 +5,17 @@
     ></app-recipe-list>
   </div>
   <div class="col-md-7">
-    <app-recipe-details
-      *ngIf="selectedRecipe; else infoText"
-      [recipe]="selectedRecipe"
-    ></app-recipe-details>
-    <ng-template #infoText>
-      <p>Please select the recipe!</p>
-    </ng-template>
+    <div class="d-flex justify-content-center">
+      <app-recipe-details
+        *ngIf="selectedRecipe; else infoText"
+        [recipe]="selectedRecipe"
+      ></app-recipe-details>
+      <ng-template #infoText>
+        <p class="badge badge-warning mt-3"
+           style="font-size: x-large"
+        >Please select the recipe!</p>
+      </ng-template>
+    </div>
   </div>
 </div>
 
