@@ -3,15 +3,18 @@
   class="list-group-item clearfix mt-1"
   (click)="onSelect()"
 >
-  <div class="float-left">
-    <h4>{{ recipe.name }}</h4>
-    <p>{{ recipe.description }}</p>
-  </div>
-  <span class="float-right ">
+    <div class="row">
+        <div class="col-8">
+            <h4>{{ recipe.name }}</h4>
+            <p>{{ recipe.description }}</p>
+        </div>
+        <div class="col-4">
         <img
-          [src]="recipe.imagePath"
-          [alt]="recipe.name"
-          class="img-fluid img-thumbnail"
-          style="max-height: 80px"/>
-        </span>
+                [src]="recipe.imagePath"
+                [alt]="recipe.name"
+                class="img-fluid img-thumbnail"
+                style="max-height: 80px"/>
+        </div>
+    </div>
+
 </a>
